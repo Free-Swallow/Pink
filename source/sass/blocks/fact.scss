@@ -1,0 +1,109 @@
+.fact {
+  display: none;
+
+  // Table
+
+  @media(min-width: $tablet-width) {
+    display: block;
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    &__img-block {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      width: 238px;
+      height: 276px;
+
+      background:
+        url("../../images/timer-diagram-fill.svg") no-repeat center 55px,
+        url("../../images/timer.svg") no-repeat center,
+        url("../../images/timer-24.svg") no-repeat center 120px;
+      background-size: 202px auto, 238px auto, 110px auto;
+
+      @media($desktop) {
+        background-size: 252px auto, 298px auto, 138px auto;
+      }
+    }
+
+    &__description {
+      margin-top: 85px;
+      width: 310px;
+    }
+
+    &__preview-text {
+      width: 170px;
+      font-size: 30px;
+      line-height: 36px;
+      font-weight: $font-bold;
+      color: $black;
+      margin: 0 0 20px 0;
+    }
+
+    &__text {
+      margin: 20px 0 24px 0;
+      padding: 0;
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: $font-normal;
+    }
+
+    &__link {
+      margin: 24px 0 0 0;
+      font-size: 14px;
+      line-height: 24px;
+      color: $pink;
+      text-decoration: none;
+    }
+
+    &__link:hover {
+      color: $main-light;
+      text-decoration: $main-light underline 1px;
+    }
+
+    &__link:active {
+      color: lighten($main-light, 60%);
+      text-decoration: lighten($main-light, 60%) underline 1px;
+    }
+  }
+
+  // Desktop
+
+  @media(min-width: $desktop-width) {
+    background-color: $grey;
+
+    &__img-block {
+      width: 298px;
+      height: 345px;
+      margin-top: 0;
+
+      background:
+        url("../../images/timer-diagram-fill.svg") no-repeat center 90px,
+        url("../../images/timer.svg") no-repeat center,
+        url("../../images/timer-24.svg") no-repeat center 150px;
+      background-size: 202px auto, 238px auto, 110px auto;
+    }
+
+    &__description {
+      flex-grow: 1;
+      padding: 0 45px;
+    }
+
+    &__preview-text {
+      width: auto;
+      line-height: 30px;
+    }
+
+    &__text {
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    &__link {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+}

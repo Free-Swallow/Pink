@@ -1,0 +1,52 @@
+.creat-post {
+
+  // Mobile
+
+  min-width: 320px;
+  max-width: 940px;
+  background-color: $grey;
+  margin: $center;
+
+  &__image {
+    margin: $center;
+    padding: 0;
+    box-shadow: 0 0 5px 5px darkgrey;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: $center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  // Tablet
+
+  @media($tablet) {
+
+    &__wrapper {
+      width: 660px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: normal;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    &__filter-block {
+      margin: 0 auto;
+    }
+  }
+
+  // Desktop
+
+  @media($desktop) {
+    &__wrapper {
+      width: 940px;
+      padding: 50px 40px;
+      justify-content: space-around;
+    }
+  }
+}

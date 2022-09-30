@@ -1,0 +1,80 @@
+.download {
+  padding-top: 18px;
+  background-color: #1d2631;
+
+  @media(min-width: $tablet-width) {
+    position: absolute;
+    top: 360px;
+    left: 50%;
+    margin-left: -310px;
+    width: 320px;
+    background-color: transparent;
+  }
+
+  @media(min-width: $desktop-width) {
+    top: 440px;
+    margin-left: -480px;
+  }
+}
+
+.download__link-load {
+  padding-top: 15px;
+  margin: 10px auto;
+}
+
+.download__list {
+  margin: 30px auto 0;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 0;
+
+  @media(min-width: $tablet-width) {
+    margin-top: 48px;
+  }
+
+  @media(min-width: $desktop-width) {
+    margin-top: 50px;
+  }
+}
+
+.download__item {
+  margin: auto 0;
+}
+
+.download__item:hover, .download__item:focus {
+  opacity: 0.4;
+}
+
+.download__item:active {
+  opacity: 0.2;
+}
+
+.download__svg {
+  width: 47px;
+  height: 56px;
+}
+
+.download__text {
+  text-align: center;
+  color: $white;
+  font-family: $open-s;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: $font-light;
+  margin: 0 auto 30px;
+  padding-top: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 28px;
+
+  @media(min-width: $tablet-width) {
+    padding-top: 48px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media(min-width: $desktop-width) {
+    padding-top: 50px;
+  }
+}

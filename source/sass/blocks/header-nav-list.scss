@@ -1,0 +1,78 @@
+.header-nav-list {
+  display: none;
+  width: 100%;
+  list-style: none;
+
+  @media(min-width: $desktop-width) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+.header-nav__link {
+  display: block;
+  text-align: center;
+  background-color: $main-light;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-top: rgba(255, 255, 255, 0.15) 1px solid;
+  border-bottom: rgba(000, 000, 000, 50%) 1px solid;
+  color: $white;
+  font-size: 18px;
+  font-weight: $font-bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 32px;
+
+  @media(min-width: $desktop-width) {
+    background-color: transparent;
+    border: none;
+    text-transform: none;
+    font-weight: $font-normal;
+    line-height: 18px;
+    margin-left: 79px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.header-nav__link:hover {
+  background-color: $main-dark;
+  color: $pink;
+
+  @media(min-width: $desktop-width) {
+    background-color: transparent;
+  }
+}
+
+.header-nav__link:active {
+  color: $pink-active;
+}
+
+.header-nav__link--current {
+  background-color: $main-dark;
+  color: dimgray;
+  cursor: default;
+
+  @media(min-width: $desktop-width) {
+    background-color: transparent;
+    border-bottom: 1px solid $white;
+    color: $white;
+  }
+}
+
+.header-nav__link--current:hover {
+  color: dimgray;
+}
+
+.header-nav__link--current:active {
+  color: dimgray;
+}
+
+.header-nav__list--open {
+  display: block;
+}

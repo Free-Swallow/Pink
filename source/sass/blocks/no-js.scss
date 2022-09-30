@@ -1,0 +1,19 @@
+@media($no-js) {
+  .no-js {
+    position: static;
+  }
+
+  .no-js .header-nav__button-toggle {
+    display: none;
+  }
+
+  .no-js .header-nav-list {
+    display: block;
+  }
+
+  .no-js .header-nav__main-menu {
+    background-color: $main-light;
+    border-bottom: rgba(000, 000, 000, 50%) 1px solid;
+  }
+
+}

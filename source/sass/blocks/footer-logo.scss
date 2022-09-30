@@ -1,0 +1,25 @@
+.footer-logo {
+  color: $main-dark;
+
+  &:hover {
+    color: $pink;
+  }
+
+  &:active {
+    opacity: $opacity-active;
+  }
+
+  &__desktop {
+    display: none;
+  }
+
+  @media($desktop) {
+    &__desktop {
+      display: block;
+    }
+
+    &__mobile {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,209 @@
+.advantages__subtitle-wrapper {
+  @media(min-width: $tablet-width) {
+    margin-top: 58px;
+    margin-bottom: 25px;
+    width: auto;
+  }
+}
+.advantages__header-subtitle {
+  font-family: $open-s;
+  font-size: 24px;
+  font-weight: $font-light;
+  line-height: $line-h-normal;
+  color: $main-light;
+  text-align: center;
+  margin: 20px auto 0;
+
+  @media(min-width: $tablet-width) {
+    display: block;
+    width: 640px;
+    font-size: 40px;
+    line-height: 54.47px;
+    margin: 0 auto;
+  }
+}
+
+.advantages__header-subtitle--second {
+  @media(min-width: $tablet-width) {
+    width: 350px;
+  }
+}
+
+.advantages__background-wrapper {
+  width: 100%;
+  border-bottom: $grey 1px solid;
+  height: 100%;
+  background:
+    url("../../images/grey-background.svg") no-repeat top;
+  background-size: cover;
+}
+
+.advantages__list-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media(min-width: $tablet-width) {
+    width: auto;
+    height: 505px;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+
+  @media(min-width: $desktop-width) {
+    display: block;
+    width: auto;
+    height: auto;
+  }
+}
+
+.advantages__image-wrapper {
+  order: 2;
+  height: 277px;
+  background:
+    url("../../images/advantages-iphone-screen-mobile.jpg") no-repeat center 35px,
+    url("../../images/advantages-iphone-mobile.png") no-repeat center top;
+
+  @media(min-resolution: 2dppx) {
+    background:
+      url("../../images/advantages-iphone-screen-mobile@2x.jpg") no-repeat center 35px,
+      url("../../images/advantages-iphone-mobile@2x.png") no-repeat center top;
+    background-size: 140px auto, 157px auto;
+  }
+
+  @media(min-resolution: 3dppx) {
+    background:
+      url("../../images/advantages-iphone-screen-mobile@3x.jpg") no-repeat center 35px,
+      url("../../images/advantages-iphone-mobile@3x.png") no-repeat center top;
+    background-size: 140px auto, 157px auto;
+  }
+
+  @media(min-width: $tablet-width) {
+    order: 0;
+    display: block;
+    width: 268px;
+    height: auto;
+    background:
+      url("../../images/advantages-iphone-screen-tablet.jpg") no-repeat center 78px,
+      url("../../images/advantages-iphone-tablet.png") no-repeat center 20px;
+
+    @media(min-resolution: 2dppx) {
+      background:
+        url("../../images/advantages-iphone-screen-tablet@2x.jpg") no-repeat center 78px,
+        url("../../images/advantages-iphone-tablet@2x.png") no-repeat center 20px;
+      background-size: 241px auto, 268px auto;
+    }
+
+    @media(min-resolution: 3dppx) {
+      background:
+        url("../../images/advantages-iphone-screen-tablet@3x.jpg") no-repeat center 78px,
+        url("../../images/advantages-iphone-tablet@3x.png") no-repeat center 20px;
+      background-size: 241px auto, 268px auto;
+    }
+  }
+
+  @media(min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.advantages__list {
+  order: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 55px;
+  padding: 0;
+  list-style: none;
+
+  @media(min-width: $desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 50px;
+  }
+}
+
+.advantages__item {
+  text-align: center;
+  padding: 0 20px;
+
+  @media(min-width: $tablet-width) {
+    padding: 0;
+    width: 320px;
+  }
+
+  @media(min-width: $desktop-width) {
+    width: 310px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.advantages__phone-wrapper {
+  display: none;
+
+  @media(min-width: $desktop-width) {
+    width: 300px;
+    display: block;
+    height: 310px;
+    order: 0;
+
+    &--screen-1 {
+      @include advantagesImg(1);
+    }
+
+    &--screen-2 {
+      @include advantagesImg(2);
+    }
+
+    &--screen-3 {
+      @include advantagesImg(3);
+    }
+  }
+}
+
+.advantages__subtitle {
+  text-align: center;
+  color: $black;
+  font-family: $open-s;
+  font-weight: $font-bold;
+  font-size: 18px;
+  line-height: 24px;
+
+  @media(min-width: $tablet-width) {
+    text-align: left;
+  }
+
+  @media(min-width: $desktop-width) {
+    width: 252px;
+    text-align: center;
+    order: 1;
+    font-size: 30px;
+    line-height: 30px;
+    padding: 40px 0 10px;
+    margin: 0;
+  }
+}
+
+.advantages__text {
+  color: $main-light;
+  font-family: $open-s;
+  font-weight: $font-normal;
+  line-height: 24px;
+  font-size: 14px;
+
+  @media(min-width: $tablet-width) {
+    text-align: left;
+  }
+
+  @media(min-width: $desktop-width) {
+    width: 252px;
+    text-align: center;
+    order: 2;
+    font-size: 18px;
+    line-height: 30px;
+    padding: 10px 0 10px;
+    margin: 0;
+  }
+}

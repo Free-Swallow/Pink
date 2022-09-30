@@ -1,0 +1,31 @@
+.button-type-two {
+  display: block;
+  border: none;
+  border-radius: 3px;
+  background-color: $button-color;
+  min-width: 276px;
+  max-height: 296px;
+  color: $white;
+  font-size: 18px;
+  font-weight: $font-bold;
+  line-height: 30px;
+  text-transform: uppercase;
+  height: 59px;
+
+  &:hover {
+    background-color: $button-hover;
+  }
+
+  &:focus {
+    background-color: $button-hover;
+    outline: none;
+  }
+
+  &:active {
+    color: $white-opacity;
+  }
+
+  &:disabled {
+    background-color: $grey2;
+  }
+}

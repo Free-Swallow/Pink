@@ -1,0 +1,173 @@
+.price {
+  background:
+    url("../../images/grey-background.svg");
+  background-size: cover;
+  padding-top: 130px;
+  padding-bottom: 45px;
+
+  &__container {
+    width: 100vw;
+    overflow: hidden;
+    margin: $center;
+  }
+
+  @media(min-width: $tablet-width) {
+    &__container {
+      width: 620px;
+      margin-bottom: 40px;
+    }
+  }
+
+  @media(min-width: $desktop-width) {
+    &__container {
+      margin-top: 60px;
+      margin-bottom: 60px;
+      width: 940px;
+    }
+  }
+}
+
+.price-table {
+  transform: translateX(-265px);
+  border-collapse: collapse;
+  width: 840px;
+  margin: $center;
+
+  @media(min-width: $tablet-width) {
+    transform: translateX(0);
+    width: 620px;
+
+    &__toggles {
+      display: none;
+    }
+  }
+
+  @media(min-width: $desktop-width) {
+    width: 940px;
+  }
+}
+
+.price-table__title {
+  width: 276px;
+  height: 94px;
+  background-color: $main-light;
+  border: 2px solid $grey2;
+  color: $white;
+  font-family: $open-s;
+  font-weight: $font-bold;
+  line-height: 30px;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &--hit .price-table__price {
+    position: relative;
+  }
+
+  &--hit {
+    width: 74px;
+    height: 74px;
+    background-image: url("../../images/hit-ribbon.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--hit .price-table__price::after {
+    content: "ХИТ";
+    transform: rotate(315deg);
+    position: absolute;
+    width: 74px;
+    height: 74px;
+    top: -41px;
+    left: 6px;
+  }
+
+  @media(min-width: $tablet-width) {
+    width: 155px;
+    height: 75px;
+
+    &--hit {
+      width: 61px;
+      height: 61px;
+      background-image: url("../../images/hit-ribbon.svg");
+      background-position: -18px;
+    }
+
+    &--hit .price-table__price::after {
+      font-size: 14px;
+      line-height: 30px;
+      font-weight: $font-normal;
+      width: 61px;
+      height: 61px;
+      top: -38px;
+      left: 0;
+    }
+  }
+}
+
+.price-table__title:nth-child(2) {
+  border-left: 1px solid $main-light;
+  border-top: 1px solid $main-light;
+}
+
+.price-table__title:nth-child(3) {
+  border-top: 1px solid $main-light;
+}
+
+.price-table__title:nth-child(4) {
+  border-right: 1px solid $main-light;
+  border-top: 1px solid $main-light;
+}
+
+.price-table__price {
+  display: block;
+  font-weight: $font-light;
+  line-height: 30px;
+  font-size: 18px;
+}
+
+.price-table__data {
+  border: 2px solid $grey2;
+  background-color: $white;
+  width: 276px;
+  height: 59px;
+  font-family: $open-s;
+  font-weight: $font-normal;
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $main-light;
+  padding: 0 0 0 20px;
+
+  &--subtitle {
+    display: none;
+  }
+
+  &--yes {
+    background-image: url("../../images/yes.svg");
+    background-repeat: no-repeat;
+    background-position: 220px center;
+  }
+
+  &--no {
+    background-image: url("../../images/no.svg");
+    background-repeat: no-repeat;
+    background-position: 220px center;
+  }
+
+  @media(min-width: $tablet-width) {
+    width: 155px;
+    text-transform: none;
+
+    &-mobile-description {
+      display: none;
+    }
+
+    &--yes, &--no {
+      background-position: center;
+    }
+
+    &--subtitle {
+      display: table-cell;
+    }
+  }
+}

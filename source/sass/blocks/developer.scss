@@ -1,0 +1,28 @@
+.developer {
+  display: flex;
+  justify-content: center;
+}
+
+.developer__text {
+  padding-right: 15px;
+  font-family: $open-s;
+  font-weight: $font-normal;
+  line-height: 18px;
+  font-size: 14px;
+}
+
+.developer__link {
+  display: inline-block;
+  width: 27px;
+  height: 34px;
+  padding-top: 6px;
+  color: $pink;
+}
+
+.developer__link:hover .developer__svg {
+  color: $main-light;
+}
+
+.developer__link:active .developer__svg {
+  opacity: $opacity-active;
+}

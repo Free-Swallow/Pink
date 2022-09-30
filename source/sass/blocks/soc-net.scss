@@ -1,0 +1,29 @@
+.soc-net {
+  min-width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.soc-net__item {
+  padding: 5px;
+}
+
+.soc-net__link {
+  text-align: center;
+  padding-top: 15px;
+  display: inline-block;
+  width: 54px;
+  height: 54px;
+  border: hsla(211, 27%, 21%, 0.1) 3px solid;
+  border-radius: 50px;
+}
+
+.soc-net__link:hover {
+  border: hsla(211, 27%, 21%, 1) 3px solid;
+}
+
+.soc-net__link:active {
+  opacity: 0.3;
+}

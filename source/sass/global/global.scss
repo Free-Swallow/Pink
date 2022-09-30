@@ -1,0 +1,81 @@
+// Fonts
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+
+  src: local("Open Sans"),
+  url("../../fonts/opensanslight.woff2") format("woff2"),
+  url("../../fonts/opensanslight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+
+  src: local("Open Sans"),
+  url("../../fonts/opensans.woff2") format("woff2"),
+  url("../../fonts/opensans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+
+  src: local("Open Sans"),
+  url("../../fonts/opensansbold.woff2") format("woff2"),
+  url("../../fonts/opensansbold.woff") format("woff");
+}
+
+// Viewports
+
+$tablet-width: 660px;
+$desktop-width: 1200px;
+$no-js-width: 1199.5px;
+
+$tablet: "min-width: #{$tablet-width}";
+$desktop: "min-width: #{$desktop-width}";
+$no-js: "max-width: #{$no-js-width}";
+
+// Global
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// Color
+
+$main-dark: #1d2631;
+$main-light: #283645;
+$white: #ffffff;
+$grey: #F2F2F2;
+$grey2: #E5E5E5;
+$black: #000000;
+$pink: #D22856;
+$button-color: #2AAB6D;
+$pink-active: hsla(344, 68%, 49%, 30%);
+$button-hover: #1C9B5E;
+$white-opacity: hsla(0, 0%, 100%, 30%);
+$opacity-active: 0.5;
+
+// font
+
+$open-s: "Open Sans", "Arial", sans-serif;
+
+$font-light: 300;
+$font-normal: 400;
+$font-bold: 700;
+
+$line-h-normal: 28.8px;
+
+//
+
+$center: 0 auto;

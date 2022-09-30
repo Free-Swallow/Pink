@@ -1,0 +1,9 @@
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-conten 1fr min-conten;
+
+  &__header {
+    position: absolute;
+  }
+}

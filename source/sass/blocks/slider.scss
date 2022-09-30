@@ -1,0 +1,70 @@
+.slider__toggles {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.slider__toggle {
+  width: 6px;
+  height: 6px;
+  background-color: grey;
+  border-radius: 15px;
+  border: none;
+  padding: 0;
+  margin: auto 0;
+  cursor: pointer;
+}
+
+.slider__toggle:hover {
+  background-color: $main-light;
+}
+
+.slider__toggle:active {
+  opacity: 0.3;
+}
+
+.slider__toggle--current {
+  width: 9px;
+  height: 9px;
+  border: $main-light 3px solid;
+  background-color: $white;
+  cursor: default;
+}
+
+.slider__toggle--current:hover {
+  background-color: $white;
+}
+
+.slider__toggle--current:active {
+  opacity: 1;
+}
+
+.slider__button-left, .slider__button-right {
+  display: none;
+  @media(min-width: $desktop-width) {
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.slider__svg {
+  width: 22px;
+  height: 41px;
+  color: lighten($main-light, 60%);
+}
+
+.slider__button-left:hover .slider__svg, .slider__button-right:hover .slider__svg {
+  color: lighten($main-light, 0);
+}
+
+.slider__button-left:focus .slider__svg, .slider__button-right:focus .slider__svg {
+  color: lighten($main-light, 0);
+}
+
+.slider__button-left:active .slider__svg, .slider__button-right:active .slider__svg {
+  color: lighten($main-light, 70%);
+}

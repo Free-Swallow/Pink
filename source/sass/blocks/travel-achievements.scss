@@ -1,0 +1,105 @@
+.travel-achievements {
+
+  //  Mobile
+
+  background-color: $grey;
+
+  &__fieldset {
+    margin-top: 42px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: none;
+  }
+
+  &__title {
+    @include  title-style(40px);
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0 auto 40px;
+  }
+
+  &__item {
+    position: relative;
+    font-size: 18px;
+    line-height: 30px;
+    padding-top: 60px;
+    padding-left: 59px;
+  }
+
+  &__checkbox {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: $white;
+    border: 2px solid $grey2;
+    border-radius: 3px;
+    left: 2px;
+  }
+
+  &__label:hover &__checkbox {
+    border-color: $main-light;
+  }
+
+  &__label:active &__checkbox {
+    border-color: $pink;
+  }
+
+  &__input:checked + &__checkbox {
+    background-image: url("data:image/svg+xml,%3Csvg width='22' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.7.284a1.024 1.024 0 0 0-1.42 0L6.704 13.603 1.735 8.729a1.015 1.015 0 0 0-.72-.294 1.031 1.031 0 0 0-.72.294.985.985 0 0 0 0 1.403l5.688 5.58a1.016 1.016 0 0 0 .72.288c.266-.001.521-.105.71-.289L21.7 1.697A.995.995 0 0 0 22 .99a.978.978 0 0 0-.3-.707z' fill='%23D22856'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__input:focus + &__checkbox {
+    border-color: $pink;
+  }
+
+  //  Tablet
+
+  @media($tablet) {
+    order: 5;
+    background-color: transparent;
+    width: 620px;
+
+    &__fieldset {
+      @include fieldsetBorder();
+    }
+
+    &__title {
+      @include  title-style();
+    }
+
+    &__list {
+      margin: 0 0 40px 60px;
+    }
+  }
+
+  //  Desktop
+
+  @media($desktop) {
+    width: 936px;
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 30px;
+      margin-left: 30px;
+      margin-right: 30px;
+      margin-top: 40px;
+    }
+
+    &__item {
+      padding-top: 0;
+    }
+
+    &__checkbox {
+      left: 0;
+    }
+  }
+}

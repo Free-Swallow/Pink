@@ -1,0 +1,56 @@
+//  Gallery - Event-form
+
+@mixin title-style($padding-top: 0, $padding-bottom: 0){
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 18px;
+  color: $pink;
+  text-align: center;
+  text-transform: uppercase;
+  padding: $padding-top 0 $padding-bottom;
+
+  @media($tablet) {
+    padding: $padding-top 25px $padding-bottom;
+  }
+}
+
+@mixin iconUserContact($margin){
+  content: "";
+  position: absolute;
+  width: 59px;
+  height: 55px;
+  background-color: $grey2;
+  top: 27px;
+  left: $margin;
+  z-index: 10;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin fieldsetBorder() {
+  border: 2px $grey2 solid;
+  border-radius: 2px;
+}
+
+@mixin advantagesImg($number) {
+  background:
+    url("../../images/advantages-iphone-screen-#{$number}-desktop.jpg") no-repeat center 45px,
+    url("../../images/shadow.png") no-repeat center 297px,
+    url("../../images/advantages-iphone-desktop.png") no-repeat center top;
+
+  @media(min-resolution: 2dppx) {
+    background:
+      url("../../images/advantages-iphone-screen-#{$number}-desktop@2x.jpg") no-repeat center 45px,
+      url("../../images/shadow@2x.png") no-repeat center 297px,
+      url("../../images/advantages-iphone-desktop@2x.png") no-repeat center top;
+    background-size: 167px auto, 300px auto, 186px auto;
+  }
+
+  @media(min-resolution: 3dppx) {
+    background:
+      url("../../images/advantages-iphone-screen-#{$number}-desktop@3x.jpg") no-repeat center 45px,
+      url("../../images/shadow@3x.png") no-repeat center 297px,
+      url("../../images/advantages-iphone-desktop@3x.png") no-repeat center top;
+    background-size: 167px auto, 300px auto, 186px auto;
+  }
+}

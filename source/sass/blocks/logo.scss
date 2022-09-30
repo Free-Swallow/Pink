@@ -1,0 +1,42 @@
+.logo {
+  color: $white;
+
+  &__tablet, &__desktop {
+    display: none;
+  }
+
+  &:hover, &:focus {
+    color: $pink;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    opacity: $opacity-active;
+  }
+
+  @media($tablet) {
+    &__mobile {
+      display: none;
+    }
+
+    &__tablet {
+      display: inline;
+    }
+  }
+
+  @media($desktop) {
+    &__tablet {
+      display: none;
+    }
+
+    &__desktop {
+      display: inline;
+    }
+  }
+}
+
+
+

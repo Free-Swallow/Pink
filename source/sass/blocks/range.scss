@@ -1,0 +1,47 @@
+.range {
+  height: 15px;
+
+  & div {
+    margin: 0 auto;
+    width: 1px;
+    height: 1px;
+    position: relative;
+  }
+
+  &__track {
+    position: absolute;
+    width: 240px;
+    height: 2px;
+    background-color: $main-dark;
+    left: -120px;
+    top: 6px;
+  }
+
+  &__slider {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: $white;
+    border: 2px solid $pink;
+    border-radius: 15px;
+    top: 0;
+    left: -7px;
+    cursor: pointer;
+  }
+
+  &__slider:hover {
+    background-color: $pink;
+  }
+
+  @media($tablet) {
+    &__track {
+      width: 202px;
+    }
+  }
+
+  @media($desktop) {
+    &__track {
+      width: 288px;
+    }
+  }
+}

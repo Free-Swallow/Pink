@@ -1,0 +1,100 @@
+.user-message {
+
+  //  Mobile
+
+  &__fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    @include title-style(42px);
+  }
+
+  label {
+    margin: 0 auto;
+  }
+
+  &__text {
+    margin: 10px auto 30px;
+    padding: 16px;
+    border: 2px solid $grey2;
+    border-radius: 2px;
+
+    font-size: 18px;
+    line-height: 30px;
+    color: $main-light;
+    width: 85vw;
+    height: 197px;
+  }
+
+  &__text:hover {
+    border-color: $main-light;
+  }
+
+  &__text:active, &__text:focus {
+    border-color: $pink;
+    outline: none;
+  }
+
+  %placeholder-style {
+    color: $main-light;
+    opacity: 1;
+  }
+
+  &__text::placeholder {
+    color: $main-light;
+    opacity: 1;
+  }
+
+  &__text::-moz-placeholder {
+    @extend %placeholder-style;
+  }
+
+  &__text::-webkit-input-placeholder {
+    @extend %placeholder-style;
+  }
+
+  &__text:-ms-input-placeholder {
+    @extend %placeholder-style
+  }
+
+  &__text::-ms-input-placeholder {
+    @extend %placeholder-style
+  }
+
+  @media($tablet) {
+    order: 6;
+
+    &__fieldset {
+      @include fieldsetBorder();
+      width: 620px;
+      margin-top: 45px;
+    }
+
+    &__title {
+      @include title-style();
+    }
+
+    &__text {
+      width: 496px;
+      height: 186px;
+    }
+  }
+
+  //  Desktop
+
+  @media($desktop) {
+    &__fieldset {
+      width: 936px;
+      padding-top: 30px;
+      padding-bottom: 25px;
+    }
+
+    &__text {
+      width: 816px;
+      height: 144px;
+    }
+  }
+}

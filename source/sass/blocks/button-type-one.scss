@@ -1,0 +1,35 @@
+.button-type-one {
+  display: block;
+  max-width: 300px;
+  font-size: 18px;
+  line-height: 18px;
+  font-family: $open-s;
+  font-weight: 700;
+  height: 55px;
+  color: $white;
+  text-decoration: none;
+  border: $white solid 2px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.button-type-one:hover {
+  color: $pink;
+  background-color: $white;
+  //border-color: $pink;
+}
+
+.button-type-one:active {
+  color: $pink-active;
+}
+
+.button-type-one:disabled {
+  background-color: transparent;
+  color: $main-light;
+  border-color: $main-light;
+  opacity: 0.1;
+}
+
+.button-type-one:disabled:hover {
+  background-color: $main-light;
+}

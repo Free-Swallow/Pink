@@ -1,0 +1,18 @@
+.preview-text-gallery {
+  text-align: center;
+  padding: 54px 35px;
+  color: $main-light;
+  line-height: 24px;
+  margin: 0 auto;
+
+  @media($tablet) {
+    padding: 100px 50px 85px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  @media($desktop) {
+    padding: 100px 0 97px;
+    width: 580px;
+  }
+}

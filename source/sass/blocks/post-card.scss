@@ -1,0 +1,168 @@
+.post-card {
+
+  //  Mobile
+
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  position: relative;
+
+  &__image {
+    margin: $center;
+    object-fit: cover;
+  }
+
+  &--panorama-of-the-day img {
+    width: 100%;
+    height: auto;
+  }
+
+  &--panorama-of-the-day::before {
+    content: "Панорама дня";
+    position: absolute;
+    padding-top: 6px;
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: $font-bold;
+    text-transform: uppercase;
+    text-align: center;
+    width: 140px;
+    height: 36px;
+    background-color: $pink;
+    color: $white;
+    right: 20px;
+  }
+
+  &__info {
+    width: 280px;
+    margin: $center;
+    background-color: $grey;
+    padding: 25px 20px;
+  }
+
+  &__user-info {
+    padding: 0;
+    margin: 0;
+    font-weight: $font-bold;
+    line-height: 24px;
+  }
+
+  &__publication-time {
+    font-weight: $font-light;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    padding: 5px 0 20px;
+    margin: 0;
+    line-height: 24px;
+  }
+
+  &__like-block {
+    padding: 5px 0 0;
+    display: flex;
+    justify-content: start;
+  }
+
+  &__button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: $pink;
+  }
+
+  &__likes-counter {
+    padding-left: 5px;
+    font-size: 12px;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+
+  &__button:hover {
+    color: $main-light;
+  }
+
+  &__button:hover &__likes-counter {
+    color: $main-light;
+    text-decoration: $main-light underline;
+  }
+
+  &__button:focus {
+    color: $main-light;
+  }
+
+  &__button:focus &__likes-counter {
+    color: $main-light;
+    text-decoration: $main-light underline;
+  }
+
+  //  Tablet
+
+  @media($tablet) {
+    &__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px 30px;
+      width: 300px;
+      height: 100%;
+    }
+
+    &__image {
+      width: 300px;
+    }
+
+    &--panorama-of-the-day::before {
+      top: 57px;
+    }
+
+    &--panorama-of-the-day &__info {
+      width: 620px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    &--panorama-of-the-day &__description {
+      order: 2;
+    }
+
+    &--panorama-of-the-day &__like-block {
+      order: 1;
+    }
+  }
+
+  @media($desktop) {
+    &--panorama-of-the-day::before {
+      top: 54px;
+      right: 130px;
+    }
+
+    &--panorama-of-the-day &__info {
+      width: 940px;
+    }
+
+    &--panorama-of-the-day &__button {
+      width: 150px;
+    }
+
+    &__button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    &__likes-counter {
+      order: 0;
+      padding-left: 0;
+    }
+
+    &__button-svg {
+      order: 1;
+      margin-right: 5px;
+    }
+  }
+}

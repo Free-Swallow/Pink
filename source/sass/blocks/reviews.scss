@@ -1,0 +1,118 @@
+.reviews {
+
+  // Mobile
+
+  &__decor-wrapper {
+    display: none;
+  }
+
+  &__button-left {
+    order: 1;
+  }
+
+  &__button-right {
+    order: 3;
+  }
+
+  &__list {
+    order: 2;
+    list-style: none;
+    padding: 0 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__user-name {
+    font-family: $open-s;
+    font-weight: $font-bold;
+    font-size: 18px;
+    line-height: 30px;
+    color: $black;
+  }
+
+  &__user-info {
+    display: none;
+  }
+
+  &__user-text {
+    font-family: $open-s;
+    font-weight: $font-normal;
+    font-size: 14px;
+    line-height: 30px;
+    color: $main-light;
+  }
+
+  // Tablet
+
+  @media(min-width: $tablet-width) {
+
+    &__list {
+      margin-top: 30px;
+    }
+
+    &__item {
+      max-width: 750px;
+    }
+
+    &__card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__user-name {
+      order: 2;
+      font-size: 20px;
+      padding: 30px 0 5px;
+      margin: 0;
+    }
+
+    &__user-info {
+      display: block;
+      order: 3;
+      font-size: 14px;
+      line-height: 30px;
+      color: $main-light;
+      font-weight: $font-normal;
+      padding: 0 0 10px;
+      margin: 0;
+    }
+
+    &__user-text {
+      order: 1;
+      font-size: 18px;
+    }
+
+    &__toggles {
+      padding: 0 0 20px 0;
+    }
+  }
+
+  @media(min-width: $desktop-width) {
+
+    &__decor-wrapper {
+      margin-top: 70px;
+      display: block;
+      height: 63px;
+      background:
+        url("../../images/quotes.svg") no-repeat center;
+    }
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 41px;
+    }
+
+    &__toggles {
+      display: none;
+    }
+  }
+}
+
